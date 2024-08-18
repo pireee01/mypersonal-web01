@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #ddefee;
+            color: #1e1e1e;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #c2c9a2;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #000000;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            flex: 1;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+            margin: 20px;
+            gap: 20px;
+        }
+
+        .container img {
+            max-width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        .bio {
+            max-width: 500px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .bio h2 {
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        .bio p {
+            font-size: 1.1em;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .social-media {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .social-media a {
+            margin: 0 15px;
+            color: #007bff;
+            font-size: 1.8em;
+            text-decoration: none;
+        }
+
+        .social-media a:hover {
+            color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                margin: 10px;
+            }
+
+            .bio {
+                max-width: 100%;
+            }
+        }
+
+        @media (min-width: 601px) {
+            nav a {
+                flex: 1;
+                padding: 14px 20px;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pirelli Rahelya Piri</h1>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'microblog_list' %}">Microblogging</a>
+        <a href="{% url 'certificates' %}">Certificates</a>
+        <a href="{% url 'portfolio' %}">Portfolio</a>
+        <a href="{% url 'chatbot' %}">Chatbot</a>
+    </nav>
+
+    <div class="container">
+        <img src="{% static 'images/WhatsApp Image 2024-08-14 at 3.05.40 PM.jpeg' %}" alt="Your Photo">
+        <div class="bio">
+            <h2>About Me</h2>
+            <p>Hello! I'm Pirelli Rahelya Piri, a passionate developer and designer. I enjoy working on creative projects and exploring new technologies. Welcome to my website where you can see more about my work, portfolio, and achievements.</p>
+            <p>Feel free to browse through my microblogs, certificates, and portfolio. Don't hesitate to get in touch!</p>
+            <div class="social-media">
+                <a href="https://www.instagram.com/yourusername" target="_blank" class="fab fa-instagram" title="Instagram"></a>
+                <a href="https://www.facebook.com/yourusername" target="_blank" class="fab fa-facebook-f" title="Facebook"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
